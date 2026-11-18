@@ -8,6 +8,7 @@ html {
   block-size: 100%;
 }
 
+/* Страница */
 .page {
   inline-size: 1200px;
   block-size: 100%;
@@ -40,20 +41,22 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
+/* Полоса прокрутки у элементов с классом custom-scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
 
+/* Дорожка полосы прокрутки */
 .custom-scrollbar::-webkit-scrollbar-track {
   background: rgb(217 217 217 / 10%);
 }
 
+/* Подвижный ползунок полосы прокрутки */
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
 
-
+/* Общий контейнер левой части с видео и правой части с карточками */
 .content {
   display: flex;
   align-items: flex-end;
@@ -61,12 +64,14 @@ ol {
   gap: 30px;
 }
 
+/* Форма поиска: город, время суток и кнопка «Найти» */
 .search-form {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
+/* Прокручиваемая область со списком карточек и кнопкой «Показать ещё» */
 .content__list-container {
   display: flex;
   flex-direction: column;
@@ -77,6 +82,7 @@ ol {
   position: relative;
 }
 
+/* Правая колонка с заголовком страницы и списком карточек */
 .content__details {
   flex-grow: 1;
   display: flex;
@@ -85,6 +91,7 @@ ol {
   min-width: 0;
 }
 
+/* Область большого видео, прелоадера и сообщения об ошибке */
 .result__video-container {
   width: 711px;
   height: 386px;
@@ -92,23 +99,27 @@ ol {
   position: relative;
 }
 
+/* Сам видеоплеер в левой части страницы */
 .result__video {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
+/* Список карточек доступных видео */
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
+/* Карточка видео: текстовая часть и миниатюра рядом */
 .content__video-card {
   display: flex;
   align-items: flex-start;
 }
 
+/* Изображение миниатюры внутри карточки видео */
 .content__video-card-thumbnail {
   height: 103px;
   width: 194px;
@@ -117,11 +128,13 @@ ol {
   object-position: center;
 }
 
+/* Текстовая часть карточки с названием города и описанием */
 .content__video-card-description-container {
   flex-grow: 1;
   min-width: 0;
 }
 
+/* Заголовки групп полей «Город» и «Время суток» */
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
@@ -129,6 +142,7 @@ ol {
   margin-bottom: 5px;
 }
 
+/* Главный заголовок «ПО-СМОТРИ В ОКНО» */
 .title {
   font-family: 'Oswald', sans-serif;
   font-size: 75px;
@@ -137,10 +151,12 @@ ol {
   text-transform: uppercase;
 }
 
+/* Выделенная цветом часть «ПО-» главного заголовка */
 .content__accent {
   color: #545050;
 }
 
+/* Ссылка, которая делает всю карточку видео кликабельной */
 .content__card-link {
   color: inherit;
   text-decoration: none;
@@ -148,6 +164,7 @@ ol {
   cursor: pointer;
 }
 
+/* Название города внутри карточки видео */
 .content__video-card-title {
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
@@ -159,6 +176,7 @@ ol {
   text-overflow: ellipsis;
 }
 
+/* Описание видео под названием города */
 .content__video-card-description {
   line-height: 0.9;
   display: -webkit-box;
@@ -167,6 +185,7 @@ ol {
   overflow: hidden;
 }
 
+/* Визуально скрытые элементы, доступные программам чтения с экрана */
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -177,15 +196,18 @@ ol {
   white-space: nowrap;
 }
 
+/* Группы полей формы: город и время суток */
 .search-form__fieldset {
   border: none;
 }
 
+/* Контейнер вариантов времени суток «Утро», «День», «Ночь» */
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
 }
 
+/* Лейблы, объединяющие поле с подписью или чекбокс с текстом */
 .search-form__label {
   display: flex;
   align-items: center;
@@ -193,6 +215,7 @@ ol {
   gap: 5px;
 }
 
+/* Поле ввода названия города */
 .search-form__textfield {
   appearance: none;
   padding: 0;
@@ -207,19 +230,23 @@ ol {
   color: #fff;
 }
 
+/* Текст подсказки в пустом поле города */
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
 }
 
+/* Поле города при получении фокуса */
 .search-form__textfield:focus {
   outline: none;
 }
 
+/* Лейбл, внутри которого находится элемент с видимым фокусом */
 .search-form__label:has(:focus-visible) {
   outline-offset: 1px;
   outline: 1px solid #fff;
 }
 
+/* Нарисованный квадратик, заменяющий стандартный вид чекбокса */
 .search-form__pseudo-checkbox {
   border: 1px solid #fff;
   height: 19px;
@@ -227,6 +254,7 @@ ol {
   padding: 1px;
 }
 
+/* Внутренняя белая заливка нарисованного чекбокса */
 .search-form__pseudo-checkbox::after {
   content: "";
   display: block;
@@ -236,18 +264,22 @@ ol {
   opacity: 0;
 }
 
+/* Заливка квадратика у выбранного чекбокса */
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   opacity: 1;
 }
 
+/* Подпись времени суток при наведении на весь лейбл */
 .search-form__checkbox-list .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
+/* Кликабельная область варианта времени суток */
 .search-form__checkbox-list .search-form__label {
   cursor: pointer;
 }
 
+/* Общее оформление кнопок «Найти» и «Показать ещё» */
 .button {
   background-color: transparent;
   border: 1px solid #fff;
@@ -262,52 +294,64 @@ ol {
   cursor: pointer;
 }
 
+/* Размер и положение кнопки «Найти» внутри формы */
 .search-form__submit-button {
   width: 194px;
   align-self: end;
 }
 
+/* Ширина кнопки «Показать ещё» */
 .more-button {
   width: 100%;
 }
 
+/* Кнопки при наведении указателя мыши */
 .button:hover {
   text-decoration: underline;
 }
 
+/* Кнопки во время нажатия */
 .button:active {
   background-color: #545050;
 }
 
+/* Кнопки при получении фокуса */
 .button:focus {
   outline: none;
 }
 
+/* Кнопки в состоянии видимого фокуса */
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
+/* Ссылка выбранной карточки, соответствующей основному видео */
 .content__card-link_current {
-  background-color:  transparent;
+  background-color: transparent;
 }
 
+/* Ссылка карточки во время нажатия */
 .content__card-link:active {
   background-color: #545050;
 }
 
+/* Ссылка карточки при наведении указателя мыши */
 .content__card-link:hover {
   text-decoration: underline;
 }
 
+/* Ссылка карточки при получении фокуса */
 .content__card-link:focus {
   outline: none;
 }
 
+/* Ссылка карточки в состоянии видимого фокуса */
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
 }
 
+/* Элемент списка, внутри которого находится ссылка карточки */
 .content__list-item {
   padding-inline: 3px;
 }
